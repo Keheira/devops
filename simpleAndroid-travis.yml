@@ -1,0 +1,17 @@
+language: android
+sudo: required
+
+android:
+  components:
+    - platform-tools
+    - build-tools-28.0.3
+    - android-28
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+script:
+  - ./gradlew build
+
+before_install:
+  - cd {folder_name} ## if already in folder remove this line
+  - chmod +x gradlew
